@@ -1,0 +1,52 @@
+*{
+ margin :0;
+ padding: 0;
+ box-sizing:border-box;
+ font-family:'Anek Latin', sans-serif;   
+}
+
+.center{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 2%;
+    display:flex;
+}
+header{
+    background-color: rgb(25, 37, 48);
+    padding: 20x 0;
+    border-bottom: 2px solid rgb(40, 40, 71);
+
+}
+.li nav-item {
+  color red;
+} 
+.i class{
+    color: white;
+}
+.logo {
+    background-color:rgb(40, 40, 71);
+    padding: 10px;
+    width: 120px;
+	height: 60px;
+}
+.menu{
+    width: 80%;
+    text-align: right;
+}
+.menu li{
+    display: inline-block;
+    margin: 20px;
+}
+.menu a
+{
+    background-color:rgb(40, 40, 71);
+    padding: 10px;
+    width: 120px;
+	height: 60px;
+    color: aliceblue;
+    
+}
+.menu li nav-item :hover
+{
+    color: yellow;
+}

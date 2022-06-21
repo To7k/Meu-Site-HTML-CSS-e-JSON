@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Meus Filmes</title>
+</head>
+<body>
+
+
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <img src="data:image/png;base64,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"/>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--menu-->
+                <div class="collapse navbar-collapse menu" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#lancamentos">Lançamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destaques">Em destaque</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/API/k.html">FILMES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#avaliacoes">Avaliações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#entrevista">Entrevistas e Making of</a
+                                                                                            
+                    </ul>
+                     <!--pesquisa-->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar filme" 
+                            aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class=" container lancam">
+            <h1>Lançamento</h1>
+        </div>
+
+         <!--carrossel-->
+        <div class="container">
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide carrossel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="col-xs-12 col-12 col-md-6 iframe">
+                                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=R21VQAoGg_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-xs-12 col-12 col-md-6 tex1">
+                                <h2>
+                                    Chamada de Emergência
+                                </h2>
+                                <p>
+                                    Uma operadora veterana de um call center de emergência, Jordan salva vidas diariamente como parte de seu trabalho, mas quando o relato frenético de um ladrão de uma jovem termina tragicamente, Jordan fica arrasada. Ela decide colocar isso na linha de frente e – em vez disso – ensinar aos outros as cordas do trabalho de alta pressão. Mas quando chega uma ligação de uma adolescente sequestrada, Jordan assume o comando como nunca antes e transforma a garota em uma parceira para ajudar a salvar sua vida.
+                                </p>
+                            </div>
+                            <div class="row text2">
+                                <div class="col-12">
+                                    Diretor:  Calinhos Querente
+                                </div>
+
+                                <div class="col-12">
+                                    Roteiro: Rpberto Nugri.
+                                </div>
+
+                                <div class="col-12">
+                                    Elenco: Abigail Breslin, Halle Berry.
+                                </div>
+                                <div class="col-12 text2">
+                                    Estreia: 23 de abril de 2010
+                                </div>
+                                <div class="col-12 text2">
+                                    Avaliação: ★★★★☆
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-xs-12 col-12 col-md-6 iframe">
+                                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=71Ps5FAfRaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-xs-12 col-12 col-md-6 tex1">
+                                <h2>
+                                    A sogra perfeita 
+                                </h2>
+                                <p>
+                                    Em A Sogra Perfeita, Neide  é uma mulher de 40 e poucos anos que se separou do marido há pouco tempo e sonha em aproveitar a vida de solteira. Dona de um badalado salão de beleza do subúrbio de São Paulo, ela colocou seus dois filhos na faculdade, mas o mais novo, Fábio Junior, não dá nem sinal de sair de casa. Para enfim alcançar a tão sonhada liberdade, ela decide treinar uma funcionária para ser a esposa perfeita para seu filho. 
+                                </p>
+                            </div>
+                            <div class="row text2">
+                                <div class="col-12">
+                                    Diretor:  Tadeus Matehus
+                                </div>
+    
+                                <div class="col-12">
+                                    Roteiro: Carla Miranda.
+                                </div>
+    
+                                <div class="col-12">
+                                    Elenco: Cacau Protásio, Luis Navarro.
+                                </div>
+                                <div class="col-12 text2">
+                                    Estreia: 27 de julho de 2017
+                                </div>
+                                <div class="col-12 text2">
+                                    Avaliação: ★★★☆☆
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-xs-12 col-12 col-md-6 iframe">
+                                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=4-vYO1wW2yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-xs-12 col-12 col-md-6 tex1">
+                                <h2>
+                                    O Estranho Mundo de Jack
+                                </h2>
+                                <p>
+                                    Uma operadora veterana de um call center de emergência, Jordan (Halle Berry) salva vidas diariamente como parte de seu trabalho, mas quando o relato frenético de um ladrão de uma jovem termina tragicamente, Jordan fica arrasada. Ela decide colocar isso na linha de frente e – em vez disso – ensinar aos outros as cordas do trabalho de alta pressão. Mas quando chega uma ligação de uma adolescente sequestrada, Jordan assume o comando como nunca antes e transforma a garota em uma parceira para ajudar a salvar sua vida. 
+        
+                                </p>
+                                <div class="row text2">
+                                    <div class="col-12">
+                                        Diretor:  Estevam Rezende.
+                                    </div>
+            
+                                    <div class="col-12">
+                                        Roteiro: Maria Pres.
+                                    </div>
+            
+                                    <div class="col-12">
+                                        Elenco: Rosi correi, Leornad Romam.
+                                    </div>
+                                    <div class="col-12 text2">
+                                        Estreia: 25 de abril de 2002
+                                    </div>
+                                    <div class="col-12 text2">
+                                        Avaliação: ★★★★★
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--Destaque-->
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="destaque" id="destaques">Destaque</h2>
+                </div>
+
+            <!--baara de categorias-->
+                <div class="col-6">
+                    <div class="dropdown" style="text-align: right;">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categoria: Todos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">tema</a></li>
+                            <li><a class="dropdown-item" href="#">tema</a></li>
+                            <li><a class="dropdown-item" href="#">tema</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="/img/film.png" class="img-fluid" alt="Imagem responsiva">
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="/img/film1.png" class="img-fluid" alt="Imagem responsiva">
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="/img/filme3.png" class="img-fluid" alt="Imagem responsiva">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--avaliações-->
+        <div class="container">
+            <h2 class="avaliacoe" id="avaliacoes">Avaliações</h2>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Rodolfo Silva</div>
+                        <div class="card-body">
+                            <p class="card-text">Muito bom! Poucas propagandas, gostei muito.
+                            </p>
+                            <h6>Avaliação:</h6>
+                            <p class="estrela">★★★★★ </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Sabrina Piris</div>
+                        <div class="card-body">
+                            <p class="card-text"> Poxa, não tem a sequencia de Harry Potter, não gostei.</p>
+                            <h6>Avaliação:</h6>
+                            <p class="estrela">★★☆☆☆ </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Fernando Silva</div>
+                        <div class="card-body">
+                            <p class="card-text">Adorei o  site, achei super intuitivo.
+                            </p>
+                            <h6>Avaliação:</h6>
+                            <p class="estrela">★★★★★ </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Ana Clara</div>
+                        <div class="card-body">
+                          <p class="card-text">Tive uns probleminhas  abrindo o site pelo Opera, fora  isso gostei muito.</p>
+                              <h6>Avaliação:</h6>
+                              <p class="estrela">★★★★☆ </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: right; margin-top: 10px;">
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-secondary btn-sm">+ Carregar mais avaliações</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Entrevustas-->
+        <div class="container">
+            <h2 class="entrevista" id="entrevista">Entrevistas & Making of</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <iframe  src="https://www.youtube.com/watch?v=SuHRyxgUs04" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </div>
+                <div class="col-4">
+                    <iframe  src="https://www.youtube.com/watch?v=drOxNNGwop4" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="col-4">
+                    <iframe  src="https://www.youtube.com/watch?v=E1u4qPTxFOw" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                    gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+            <!--texto-->        
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <p><b>Filme:</b> Piratas Do Caribe <br>
+                            <b>Diretor:</b> Max Maximus<br>
+                            <b>Roteiro:</b> José silva <br>
+                            <b>Estreia:</b> 13 Agosto 2013
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p><b>Filme:</b> Tarzan<br>
+                            <b>Diretor:</b> Alison Marcel <br>
+                            <b>Roteiro:</b>  Macaco Scott <br>
+                            <b>Estreia:</b> 3 de setembro de 1980
+                        </p>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p><b>Filme:</b> Titanic.<br>
+                            <b>Diretor:</b> Isac Nascimento.<br>
+                            <b>Roteiro:</b>  Scott Silver..<br><b>Estreia:</b> 30 de abril de 2008 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--novidade-->
+        <div class="container novidSobre">
+            <div class="row">
+                <div class="col-8">
+                    <div class="container">
+                        <h2 class="novidade" id="novidade">Novidades e Curiosidades</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-11 col-md-4">
+                                    <img src="/img/film3.png" class="img-fluid" alt="Imagem responsiva">
+                                </div>
+                                <div class="col-xs-12 col-12 col-md-6">
+                                    <h5>Carandiru</h5>
+                                    <p>Um médico (Luiz Carlos Vasconcelos) se oferece para realizar um trabalho de prevenção a AIDS no maior presídio da América Latina, o Carandiru. Lá ele convive com a realidade dos cárceres, que inclui violência, superlotação das celas e instalações precárias. Porém, apesar de todos os problemas, o médico logo percebe que os prisioneiros não são figuras demoníacas, existindo dentro da prisão solidariedade, organização e uma grande vontade de viver.</p>
+                                    <button type="button" class="btn btn-primary btn-sm">Oscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="margin-top: 10px;">
+                            <div class="row">
+                                <div class="ol-xs-12 col-11 col-md-4">
+                                    <img src="/img/film2.png" class="img-fluid" alt="Imagem responsiva">
+                                </div>
+                                <div class="col-xs-12 col-12 col-md-6">
+                                    <h5>Doutor Estranho</h5>
+                                    <p>A vida do Dr. Stephen Strange  muda depois que um acidente de carro o rouba do uso de suas mãos. Quando a medicina tradicional falha, ele procura cura e esperança em um misterioso enclave. Ele rapidamente descobre que o enclave está na linha de frente de uma batalha contra forças das trevas invisíveis empenhadas em destruir a realidade. Em pouco tempo, Strange é forçado a escolher entre sua vida de fortuna e status ou deixar tudo para trás para defender o mundo como o feiticeiro mais poderoso que existe..</p>
+                                    <button type="button" class="btn btn-warning btn-sm">Hollowood</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Oscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="margin-top: 10px;">
+                            <div class="row">
+                                <div class="ol-xs-12 col-11 col-md-4">
+                                    <img src="/img/film.png" class="img-fluid" alt="Imagem responsiva">
+                                </div>
+                                <div class="col-xs-12 col-12 col-md-6 botao">
+                                    <h5>Big trouble</h5>
+                                    <p>Baseado no primeiro romance best-seller do humorista Dave Barry, vencedor do Prêmio Pulitzer, "Big Trouble" conta a história de como uma mala misteriosa reúne e muda a vida de um pai divorciado, uma dona de casa infeliz, dois assassinos, um par de bandidos de rua, dois adolescentes apaixonados, dois homens do FBI e um sapo psicodélico..</p>
+                                    <button type="button" class="btn btn-warning btn-sm">Hollowood</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Oscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-4 sobre">
+                    <h2>Sobre</h2>
+                    <p>O Meu Cine é um site digital que lhe oferece sempre as melhores qualidades na hora de se escolher seu filme preferido. Sempre buscando atualizar com os novos filmes do momento.</p>
+                    <h2>Editoria</h2>
+                    <p>Redação: Arthur Assis Braga</p>
+                    <p>Pesquisa: Arthur Assis Braga</p>
+                    <p>Gerente Geral: Arthur Assis Braga</p>
+
+                    <h3>Redes Socias</h3>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class=" fa fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="col-12 footer_area">
+            © 2022 Copyright: Desenvolvimento de Interfaces Web -
+                <b>ICEI PUC MINAS</b>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/204212367c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
